@@ -10,6 +10,8 @@ const postRouter = require(path.join(__dirname, "router", "posts.js"));
 
 app.use("/posts", postRouter);
 
+app.use(express.static("public"));
+
 app.get("/", (req, res) => {
   res.send("Homepage");
 });
